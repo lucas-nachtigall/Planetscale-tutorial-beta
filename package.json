@@ -1,0 +1,22 @@
+{
+  "name": "planetscale-tutorial-beta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucas-nachtigall/Planetscale-tutorial-beta.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucas-nachtigall/Planetscale-tutorial-beta/issues"
+  },
+  "homepage": "https://github.com/lucas-nachtigall/Planetscale-tutorial-beta#readme",
+  "dependencies": {
+    "mysql2": "^2.3.3"
+  }
+}
