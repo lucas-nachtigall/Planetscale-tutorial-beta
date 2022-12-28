@@ -74,6 +74,7 @@ After the publishing, you can see your new project on Bohr.io.
 ![Screenshot_5](https://user-images.githubusercontent.com/69644385/209860054-5c0dd57c-e494-4b2e-927b-9c282a99aa53.png)
 
 if you visit your project's url and access the url/api/users, you'll be able to see your API working and fetching the data on the users table at Planetscale's database.
+
 ![Screenshot_6](https://user-images.githubusercontent.com/69644385/209860051-52a25a7c-17fc-420f-9f8c-c05ec95aa440.png)
 
 ## Coding the function.
