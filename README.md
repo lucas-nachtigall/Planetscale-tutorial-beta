@@ -83,6 +83,8 @@ If you want to create your own project using Bohr.io and Planetscale, here's how
 After creating your Planetscale account and keeping your connection string saved, create a new repository on github.
 ![Screenshot_10](https://user-images.githubusercontent.com/69644385/209853780-7d9b00e7-93dd-41cb-94af-bd036f84d657.png)
 
+### Importing and configuring
+
 Now, on Bohr.io, navigate to add a new project, and click on "import".
 ![Screenshot_1](https://user-images.githubusercontent.com/69644385/209866435-e89d7f47-d386-4314-a522-584145b79d59.png)
 
@@ -104,11 +106,15 @@ After adding your environment variables, click "save" to save your data, don't f
 
 ![Screenshot_3](https://user-images.githubusercontent.com/69644385/209866432-e0af32c4-7874-49e6-a4ec-bedebdd44b12.png)
 
+### Coding the project - Installing 
+
 After importing your project to Bohr, clone the repository to your computer, open your prefered terminal on the project's folder and type `npm init` to initialize the project.
 ![Screenshot_11](https://user-images.githubusercontent.com/69644385/209853784-a6f533b9-191d-4521-84a3-c86d2d074817.png)
 
 Now type `npm install mysql2 lambda-api` to install the required packages.
 ![Screenshot_12](https://user-images.githubusercontent.com/69644385/209853786-f6d9b9fc-4480-40ee-83d2-1d248a18a625.png)
+
+### Coding the project - Fetching all users
 
 On the root folder create a new folder called "api" and inside the "api" folder create a new folder called "core". After that, inside the core folder create a new file called index.js. and type the following code:
 ```javascript
@@ -140,6 +146,8 @@ On this code, we configurate our API to reply to GET requests on the "/users" ro
 If you commit and push your files, Bohr will automatically deploy your project and you will be able to see the users that you created on Planetscale on the api/users route.
 ![Screenshot_14](https://user-images.githubusercontent.com/69644385/209853792-e2fb6a31-0318-42d4-b798-3e4ecbcc317a.png)
 
+### Coding the project - Fetching user by id
+
 To fetch a specific user id, we need to create a new route, so add the following code to your index.js file:
 
 ```javascript 
@@ -159,6 +167,7 @@ api.get('/user/:id', async (req, res) => {
 This code will reply to requests on {YOUR-PROJECT-URL}/api/user/1 for example, and fetch the user data with the selected id. After pushing and deploying your code, you can also test it on the same way as before. 
 ![Screenshot_16](https://user-images.githubusercontent.com/69644385/209853795-457e895d-3e15-43dc-abec-29576b321d00.png)
 
+### Coding the project - Insert new user
 To insert new users on the database, we need a PUT request. So add the following code to your index.js file:
 ```javascript
 api.put('/user', async (req, res) => {
@@ -183,6 +192,8 @@ After deploying your code, you can test it sending PUT requests to {YOUR-PROJECT
 ![Screenshot_18](https://user-images.githubusercontent.com/69644385/209853798-a23a8398-407d-4567-9cc9-fe85f4a9ffe2.png)
 Here we can see that the new user as added to our database.
 ![Screenshot_19](https://user-images.githubusercontent.com/69644385/209853800-5832c2f3-c4bd-414a-8863-afdde70b263f.png)
+
+### Coding the project - Delete an user
 
 Now to delete users, we need a new route with the DELETE method. Add the following code to your index.js:
 ```javascript
